@@ -76,4 +76,7 @@ When done, push your branch and let us know it’s done by making a pull request
   * CD to directory `cd search` and then run npm install `npm install` .
   * Run the sass app `npm start`.  
   * Run the live server app `live-server`. Install it if not already `sudo npm install live-server -g`.  
-  
+
+
+# [DEMO BUTTON](http://button.softhem.se) 
+# [DEMO SEARCH](http://search.softhem.se) 
