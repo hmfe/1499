@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ali">
+    <meta name="author" content="ali sw">
+    <link rel="shortcut icon" href="images/">
+
+    <title>Search - a title </title>
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css?22" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+          integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI=" crossorigin="anonymous"/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<section>
+
+    <div class="dd-wrapper">
+        <div class="dd-header dd-header-open" id="select-city">
+            <input type="text" class="dd-header-title" id="dd-header-title" placeholder="Type to search"/>
+            <i id="clearSearchInput" style="display: inline-block; position: absolute; top: 20px; margin-left: -30px; color: black;" class="fas fa-times"></i>
+        </div>
+        <ul class="dd-list" id="dd-list">
+            <li class="dd-list-item">Stockholm</li>
+            <li class="dd-list-item">Göteborg</li>
+            <li class="dd-list-item">Malmö</li>
+            <li class="dd-list-item">Linköping</li>
+        </ul>
+    </div>
+
+</section>
+
+<section class="history">
+    <div class="history--header">
+        <h2>Search history</h2>
+        <span onclick="historyList.clear();">Clear search history</span>
+    </div>
+    <ul id="history-list-ul" class="history-list-group"></ul>
+</section>
+
+<script src="js/search.js"></script>
+
+</body>
+</html>

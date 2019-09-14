@@ -1,0 +1,63 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+* {
+  box-sizing: border-box;
+}
+
+.history--header {
+  h2 {
+    font-size: 18px;
+    display: inline-block;
+    font-family: $font-family;
+  }
+  span {
+    font-size: 12px;
+    display: inline-block;
+    float: right;
+    font-family: $font-family;
+    cursor: pointer;
+  }
+}
+
+ul.history-list-group {
+  text-decoration: none;
+  list-style: none;
+  background-color: #F8F8F8;
+  padding: 2px;
+
+  .date-time {
+    float: right;
+    color: #7a7a7a;
+
+    i {
+      margin-left: 10px;
+    }
+  }
+
+  .data {
+    font-family: $font-family;
+    font-size: 18px;
+  }
+
+  li {
+    padding: 15px 0;
+    font-family: $font-family;
+    font-size: 18px;
+
+    &:hover {
+    }
+
+    .delete {
+      display: inline-block;
+      float: right;
+      cursor: pointer;
+      &:hover {
+        font-weight: bold;
+      }
+    }
+  }
+  li:not(:last-child) {
+    border-bottom: 1px solid #E8E8E8;
+  }
+}

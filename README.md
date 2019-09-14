@@ -6,7 +6,7 @@ expect your delivery.
 
 This Work Task is divided into three parts:
 
-### 1: CSS-wizardry ###
+### 1: CSS-wizardry ###ls 
 
 
 ![alt text](https://raw.githubusercontent.com/hmfe/54321/master/button.png)
@@ -63,3 +63,17 @@ done.
 When done, push your branch and let us know it’s done by making a pull request.
 
 **Good Luck and have fun!**
+
+### Installations
+
+#### TASK 1
+  * Clone the repository: `git clone https://github.com/iloveyii/1499.git`.
+  * CD to directory `cd button` and then run npm install `npm install` .
+  * Run the sass app `npm start`.  
+  * Run the live server app `live-server`. Install it if not already `sudo npm install live-server -g`.  
+  
+### TASK 3  
+  * CD to directory `cd search` and then run npm install `npm install` .
+  * Run the sass app `npm start`.  
+  * Run the live server app `live-server`. Install it if not already `sudo npm install live-server -g`.  
+  

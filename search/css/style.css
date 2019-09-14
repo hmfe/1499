@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F8F8F8;
+  padding: 10px; }
+
+section {
+  padding: 50px; }
+
+.dd-wrapper {
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  position: relative; }
+
+.dd-header {
+  background-color: #1a1b30;
+  padding: 0px;
+  border: none;
+  outline: none;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  letter-spacing: 1.2px;
+  min-width: 60px;
+  box-sizing: border-box;
+  line-height: 2;
+  margin-bottom: 12px;
+  cursor: pointer;
+  margin: 0;
+  height: 56px;
+  border: 1px solid #c1c1c1; }
+  .dd-header:focus, .dd-header:hover {
+    border-left: 1px solid #75a522; }
+  .dd-header-open {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0; }
+  .dd-header-title {
+    float: left;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 14px; }
+  .dd-header .dd-icon {
+    float: right; }
+
+.dd-list {
+  background-color: white;
+  display: none;
+  border: 1px solid #c1c1c1;
+  position: absolute;
+  margin-top: 2px;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  list-style: none;
+  padding: 0; }
+  .dd-list-item {
+    color: #000;
+    font-family: inherit;
+    padding: 12px; }
+    .dd-list-item:hover {
+      background-color: #c1c1c1;
+      cursor: pointer; }
+
+* {
+  box-sizing: border-box; }
+
+.history--header h2 {
+  font-size: 18px;
+  display: inline-block;
+  font-family: "Roboto", sans-serif; }
+
+.history--header span {
+  font-size: 12px;
+  display: inline-block;
+  float: right;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer; }
+
+ul.history-list-group {
+  text-decoration: none;
+  list-style: none;
+  background-color: #F8F8F8;
+  padding: 2px; }
+  ul.history-list-group .date-time {
+    float: right;
+    color: #7a7a7a; }
+    ul.history-list-group .date-time i {
+      margin-left: 10px; }
+  ul.history-list-group .data {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px; }
+  ul.history-list-group li {
+    padding: 15px 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px; }
+    ul.history-list-group li .delete {
+      display: inline-block;
+      float: right;
+      cursor: pointer; }
+      ul.history-list-group li .delete:hover {
+        font-weight: bold; }
+  ul.history-list-group li:not(:last-child) {
+    border-bottom: 1px solid #E8E8E8; }

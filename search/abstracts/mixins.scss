@@ -1,0 +1,36 @@
+@import "./variables";
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin clipPathTop {
+  clip-path: polygon(0 0, 50% $box-top-depth, 100% 0, 100% 100%, 0 100%);
+}
+
+
+@mixin inputBox {
+  background-color: #1a1b30;
+  padding: 0px;
+  border: none;
+  outline: none;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  letter-spacing: 1.2px;
+  min-width: 60px;
+  box-sizing: border-box;
+  line-height: 2;
+  margin-bottom: 12px;
+}
+
+@mixin inputBoxFocusHover {
+  &:focus, &:hover {
+    border-left: 1px solid $color-green-light-1;
+  }
+}
