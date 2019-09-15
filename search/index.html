@@ -26,10 +26,10 @@
 
     <div class="dd-wrapper">
         <div class="dd-header dd-header-open" id="select-city">
-            <input type="text" class="dd-header-title" id="dd-header-title" placeholder="Type to search"/>
-            <i id="clearSearchInput" style="display: inline-block; position: absolute; top: 20px; margin-left: -30px; color: black;" class="fas fa-times"></i>
+            <input tabindex="0" type="text" class="dd-header-title" id="dd-header-title" placeholder="Search country name"/>
+            <i tabindex="1" id="clearSearchInput" class="fas fa-times"></i>
         </div>
-        <ul class="dd-list" id="dd-list">
+        <ul class="dd-list" id="dd-list" tabindex="2">
             <li class="dd-list-item">Stockholm</li>
             <li class="dd-list-item">Göteborg</li>
             <li class="dd-list-item">Malmö</li>
@@ -42,12 +42,45 @@
 <section class="history">
     <div class="history--header">
         <h2>Search history</h2>
-        <span onclick="historyList.clear();">Clear search history</span>
+        <span class="clear-search-history" id="clear-search-history" tabindex="3" onclick="historyList.clear();">Clear search history</span>
     </div>
-    <ul id="history-list-ul" class="history-list-group"></ul>
+    <ul tabindex="5" id="history-list-ul" class="history-list-group"></ul>
 </section>
 
 <script src="js/search.js"></script>
+
+<script>
+    var focus = ['dd_header_title', 'clearSearchInput', 'clear-search-history'];
+
+    var dd_header_title = document.getElementById('dd-header-title');
+    window.onload = function () {
+        dd_header_title.focus();
+    }
+
+    document.addEventListener('keyup2', (e) => {
+        const ids = Object.keys(focus);
+        switch (e.which) {
+            case 39:
+                document.getElementById(focus[2]).focus();
+                console.log(39); break;
+            case 37:
+                const id = focus[0];
+                console.log('id', id, 37);
+                const el = document.getElementById(id+'');
+                console.log(el); break;
+            case 40:
+                document.getElementById(focus[2]).focus();
+                console.log(40); break;
+            case 38:
+                document.getElementById(focus[1]).focus();
+                console.log(38); break;
+
+
+        }
+    })
+
+
+</script>
 
 </body>
 </html>

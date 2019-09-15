@@ -45,6 +45,17 @@ section {
     font-size: 14px; }
   .dd-header .dd-icon {
     float: right; }
+    .dd-header .dd-icon:focus {
+      font-size: 200px; }
+  .dd-header #clearSearchInput {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    margin-left: -30px;
+    color: black; }
+    .dd-header #clearSearchInput:focus {
+      font-size: 200%;
+      top: 12px; }
 
 .dd-list {
   background-color: white;
@@ -74,12 +85,14 @@ section {
   display: inline-block;
   font-family: "Roboto", sans-serif; }
 
-.history--header span {
+.history--header .clear-search-history {
   font-size: 12px;
   display: inline-block;
   float: right;
   font-family: "Roboto", sans-serif;
   cursor: pointer; }
+  .history--header .clear-search-history:focus {
+    font-weight: bold; }
 
 ul.history-list-group {
   text-decoration: none;

@@ -11,13 +11,18 @@
     display: inline-block;
     font-family: $font-family;
   }
-  span {
+
+  .clear-search-history {
     font-size: 12px;
     display: inline-block;
     float: right;
-    font-family: $font-family;
+    font-family: "Roboto", sans-serif;
     cursor: pointer;
+    &:focus {
+      font-weight: bold;
+    }
   }
+
 }
 
 ul.history-list-group {
@@ -61,3 +66,5 @@ ul.history-list-group {
     border-bottom: 1px solid #E8E8E8;
   }
 }
+
+

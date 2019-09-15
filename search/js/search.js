@@ -49,7 +49,7 @@ ddHeaderTitle.addEventListener('keyup', e => {
         historyList.add(e.target.value);
     } else {
         searchString = e.target.value;
-        if (searchString.length > 3) {
+        if (searchString.length > 2) {
             clearTimeout(timeOutId);
             timeOutId = setTimeout(() => {
                 search(searchString);
@@ -62,16 +62,17 @@ ddHeaderTitle.addEventListener('keyup', e => {
 // The search function that makes the ajax call
 function search(searchString) {
     const ajaxRequest = new XMLHttpRequest();
-    const url = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + searchString + "&api-key=7yAzoPV0e7uQVtuKXJdFw6Jcth8AmGjh";
+    let url = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + searchString + "&api-key=7yAzoPV0e7uQVtuKXJdFw6Jcth8AmGjh";
+        url = "https://restcountries.eu/rest/v2/name/" + searchString;
     let abstracts = [];
 
     ajaxRequest.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             const results = JSON.parse(this.responseText);
-            if (results.status === 'OK') {
-                console.log('OK');
-                results.response.docs.forEach(doc => {
-                    abstracts.push(doc.abstract.substring(0, 20));
+            if (results) {
+                console.log('OK', results);
+                results.forEach( country => {
+                    abstracts.push(country.name);
                 });
             }
 
