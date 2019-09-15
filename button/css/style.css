@@ -1,3 +1,6 @@
+section {
+  padding: 50px; }
+
 html, body {
   padding: 0;
   margin: 0;
@@ -10,14 +13,15 @@ button.delete {
   font-family: "Roboto", sans-serif;
   border: 2px solid #7a7a7a;
   padding: 10px 10px;
-  width: 260px;
+  min-width: 260px;
   line-height: 100px;
   font-size: 35px;
   font-weight: bold;
-  background-color: #ffa500bd;
+  background-color: #f2a44d;
   opacity: 0.9; }
   button.delete::after {
     content: '\00d7';
+    margin-left: 8px;
     background-color: #FFFFFF;
     width: 100px;
     height: 100px;
@@ -28,6 +32,4 @@ button.delete {
     font-weight: 300;
     font-family: "Roboto", sans-serif;
     line-height: 100px;
-    font-size: 83.33333px; }
-
     font-size: 83.33333px; }
