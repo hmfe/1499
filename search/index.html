@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ali">
+    <meta name="author" content="ali sw">
+    <link rel="shortcut icon" href="images/">
+
+    <title>Search - a title </title>
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css?22" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+          integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI=" crossorigin="anonymous"/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<section>
+
+    <div class="dd-wrapper">
+        <div class="dd-header dd-header-open" id="select-city">
+            <input tabindex="0" type="text" class="dd-header-title" id="dd-header-title" placeholder="Search country name"/>
+            <i tabindex="1" id="clearSearchInput" class="fas fa-times"></i>
+        </div>
+        <ul class="dd-list" id="dd-list" tabindex="2">
+            <li class="dd-list-item">Stockholm</li>
+            <li class="dd-list-item">Göteborg</li>
+            <li class="dd-list-item">Malmö</li>
+            <li class="dd-list-item">Linköping</li>
+        </ul>
+    </div>
+
+</section>
+
+<section class="history">
+    <div class="history--header">
+        <h2>Search history</h2>
+        <span class="clear-search-history" id="clear-search-history" tabindex="3" onclick="historyList.clear();">Clear search history</span>
+    </div>
+    <ul tabindex="5" id="history-list-ul" class="history-list-group"></ul>
+</section>
+
+<script src="js/search.js"></script>
+
+<script>
+    var focus = ['dd_header_title', 'clearSearchInput', 'clear-search-history'];
+
+    var dd_header_title = document.getElementById('dd-header-title');
+    window.onload = function () {
+        dd_header_title.focus();
+    }
+
+    document.addEventListener('keyup2', (e) => {
+        const ids = Object.keys(focus);
+        switch (e.which) {
+            case 39:
+                document.getElementById(focus[2]).focus();
+                console.log(39); break;
+            case 37:
+                const id = focus[0];
+                console.log('id', id, 37);
+                const el = document.getElementById(id+'');
+                console.log(el); break;
+            case 40:
+                document.getElementById(focus[2]).focus();
+                console.log(40); break;
+            case 38:
+                document.getElementById(focus[1]).focus();
+                console.log(38); break;
+
+
+        }
+    })
+
+
+</script>
+
+</body>
+</html>
